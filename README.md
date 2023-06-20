@@ -1,3 +1,26 @@
+<br />
+<div align="center">
+  <a href="https://github.com/github_username/repo_name">
+    <img src="assets/logo.png" alt="Logo" width="355" height="199">  
+  </a>
+
+<h3 align="center">Smart Door Lock</h3>
+  <p align="center">
+      An Arduino and OpenCV-powered smart door lock system using facial recognition for secure access control.
+    <br />
+  </p>
+</div>
+<div align="center">
+</div>
+
+----
+## Active Face Recognition 
+
+<div style="display: flex"; align="center">
+  <img src="assets/match.png" alt="Match" style="height: 200px; flex: 1;" />
+  <img src="assets/no_match.png" alt="No Match" style="height: 200px; flex: 1;" />
+</div>
+
 Using Computer Vision Zone can transmit face detection data to Arduino through Serial connection. 
 
 The following libraries were used:
@@ -7,24 +30,6 @@ The following libraries were used:
 - serial
 - pyserial
 - 
-<br />
-<div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    
-  </a>
-
-<h3 align="center">Ultimate Gym Bro</h3>
-  ![logo](https://github.com/hmolavi/smart-door-lock/assets/75816912/67802635-70fb-4705-8b0a-1a9ef5a075d6)
-  <p align="center">
-      An Arduino and OpenCV-powered smart door lock system using facial recognition for secure access control.
-    <br />
-    <a href="https://hmolavi.com/ultimate-gym-bro-chat/">Website Demo</a>
-  </p>
-</div>
-<div align="center">
-</div>
-
-----
 ## Available on Telegram
 
 <div align="center">
