@@ -1,12 +1,12 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="assets/logo.png" alt="Logo" width="355" height="199">  
+    <img src="assets/logo.png" alt="Logo" height="175">  
   </a>
 
 <h3 align="center">Smart Door Lock</h3>
   <p align="center">
-      An Arduino and OpenCV-powered smart door lock system using facial recognition for secure access control.
+      Secure access control using your face!
     <br />
   </p>
 </div>
@@ -15,61 +15,37 @@
 
 ----
 ## Active Face Recognition 
+The program recognizes and compares the face with the 'reference.jpg' file and indicates if person is matching or not.
 
 <div style="display: flex"; align="center">
   <img src="assets/match.png" alt="Match" style="height: 200px; flex: 1;" />
   <img src="assets/no_match.png" alt="No Match" style="height: 200px; flex: 1;" />
 </div>
 
-Using Computer Vision Zone can transmit face detection data to Arduino through Serial connection. 
-
-The following libraries were used:
-- cvzone
-- opencv-python
-- mediapipe
-- serial
-- pyserial
-- 
-## Available on Telegram
-
-<div align="center">
-  <img src="assets/telegram_chat.png">
-</div>
+## Arduino Controlled Stepper Motor
+A stepper motor is responsible for unlocking and locking the door which is controlled by the Arduino input. Serial connection to Arduino allows for Python program to communicate if person is allowed to enter or not.
 
 # Getting Started
-You can run the module on your device or on cloud through Repl. Try changing the personality of the agent by editing the string at the bottom of src/api.py file!
 
-## Running in Replit
-Go to my <a href="https://replit.com/@hmolavi/Ultimate-Gym-Bro">Repl </a> repository and deploy project by pasting deploy.py into shell terminal
+To begin you must first download some external libraries which can be done by excecuting the following into your windows command prompt
 ``` bash
-deploy.py
+pip install opencv-python serial mediapipe pyserial deepface
 ```
-Click on the steamship link and create your account. Create an instance of the module, you will be redirected to a new page where you can either chat there or connect to a Telegram bot which require seperate instructions.
-## Running on Localhost
-Initially you need to setup a Python virtual environment. You can do so by running the following:
-```bash
-python3.8 -m venv .venv
-source .venv/bin/activate
-python3.8 -m pip install -r requirements.txt
-```
-Then, run your agent:
-```bash
-python3.8 main.py
-```
+Afterwards follow these instructions:
+1. Install all of the files via zip folder
+2. Connect your Arduino to your computer and upload the `Receiver.ino` file to it
+3. Connect the stepper motor to pin 9 on the Ardiuno
+4. Upload the reference.jpg image to the same folder
+5. Execute `main.py` file
 
 ## Roadmap
-- [x] Build api foundation
-- [x] Create new Telegram bot and access token
-- [x] Steamship
-  - [x] Download SDK
-  - [x] Connect API
-  - [x] Create instance
-  - [x] Link Telegram Bot
-- [ ] Launch on Repl
-- [ ] Adding picture feature
-  - [x] Set foundation
-  - [ ] Specify picture prefrences
-  - [ ] Connect to DALL-E
+- [x] Import libraries and initiate OpenCV
+- [x] Create reference profile
+- [x] Confirm face recognition working as intended
+- [x] Connect arduino and install neccesary libraries
+- [x] Transmit message across Serial COM port
+- [x] Write Arduino code to accomodate stepper motor
+- [ ] Create a door bell and only search for faces when door bell is rung
      
 ## Contributing
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
