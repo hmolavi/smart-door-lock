@@ -1,15 +1,25 @@
-#include <cvzone.h>
+#include <Servo.h>
 
-SerialData serialData(1, 1); 
-int valsRec[1];
+Servo servo;
 
 void setup() {
-  pinMode(13, OUTPUT);
-  serialData.begin();
+  Serial.begin(9600);
+  servo.attach(9);
+  pinMode(LED_BUILTIN, OUTPUT);
+  servo.write(0);
+  delay(1000);
 }
 
 void loop() {
-  serialData.Get(valsRec);
-  digitalWrite(13, valsRec[0]); 
-  delay(10);
+  if (Serial.available()) {
+    String receivedData = Serial.readString();
+
+    if (receivedData == "Match: True") {
+      Serial.write("Recieved: True");
+      digitalWrite(LED_BUILTIN, HIGH);
+      servo.write(180);
+      delay(15000); // Door open for 15 seconds
+      digitalWrite(LED_BUILTIN, LOW);
+    }
+  }
 }
