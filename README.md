@@ -29,7 +29,7 @@ A stepper motor is responsible for unlocking and locking the door which is contr
 
 To begin you must first download some external libraries which can be done by excecuting the following into your windows command prompt
 ``` bash
-pip install opencv-python serial mediapipe pyserial deepface
+pip install cvzone opencv-python serial mediapipe pyserial deepface
 ```
 Afterwards follow these instructions:
 1. Install all of the files via zip folder
